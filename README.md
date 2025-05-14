@@ -13,3 +13,9 @@ It means they are both connecting to the same RabbitMQ server. If they didnt use
 ![Publisher Terminal](images/publisher_terminal.png)
 
 ![Subscriber Terminal](images/subscriber_terminal.png)
+
+### RabbitMQ after running publisher twice
+
+![Spikes in RabbitMQ](images/spike_website.png)
+
+The monitoring chart shows only two visible purple spikes and no yellow spikes, indicating that two messages were successfully delivered to and acknowledged by the consumer. This confirms that the subscriber received and processed them. The lack of yellow spikes implies that either very few messages were published or the publishing activity wasn't recorded within the chart's displayed time range.
